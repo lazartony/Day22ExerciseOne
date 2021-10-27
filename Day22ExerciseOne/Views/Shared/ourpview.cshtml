@@ -1,1 +1,31 @@
-﻿<h1>Hai</h1>
+﻿@model IEnumerable<Day22ExerciseOne.Models.Emp>
+<h1>Hai</h1>
+<table class="table">
+	<tr>
+		<th>
+			@Html.DisplayNameFor(model => model.EName)
+		</th>
+		<th>
+			@Html.DisplayNameFor(model => model.EDesig)
+		</th>
+		<th>
+			@Html.DisplayNameFor(model => model.EDOJ)
+		</th>
+	</tr>
+
+	@foreach (var item in Model)
+	{
+		<tr>
+			<td>
+				@Html.DisplayFor(modelItem => item.EName)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.EDesig)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.EDOJ)
+			</td>
+		</tr>
+	}
+
+</table>
